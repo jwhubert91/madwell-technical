@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px;
+}
+
+.app {
+  background-color: #EAEAEA;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+}
+
+h1.header__title {
+  font-size: 1.5em;
+  margin: 0;
+  padding: 0;
+  color: #2344F5;
+}
+
+.footer {
+  color: #3F841F;
+}
+
+.header, main, .footer {
+  width: 100%;
+}
+
+.header, .footer {
+  text-align: center;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+  padding: 20px;
+}
+
+main {
+  height: 80vh;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+div.imageGrid {
+  background-color: white;
+  padding: 20px 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 150px);
+  grid-gap: 20px;
+  overflow:scroll;
+  justify-content: center;
+}
+
+div.image {
+  /* width: 150px; */
+  height: 150px;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 805px) {
+  main {
+    height: auto;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+  }
+  div.imageGrid {
+    padding: 20px 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 150px);
+    grid-gap: 20px;
+    overflow:scroll;
+  }
+  .footer {
+    background-color: #EAEAEA;
+    padding: 20px 0;
+  }
+}
